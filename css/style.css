@@ -206,6 +206,29 @@ span.yellow_l {
 		top: 350px !important;
 	}
 }
+.subtitle {
+	top: 250px;
+	min-width: 100%;
+	position: absolute;
+}
+.bluecoincoin {
+    color: rgb(4, 139, 154)
+}
+.bphotor, .bphotol {
+    cursor: pointer;
+    z-index: 10000;
+    position:absolute;
+    top: 45%;
+    font-size: 30px;
+    color: white;
+    opacity: 0.8;
+}
+.bphotor {
+    right: 5px;
+}
+.bphotol {
+    left: 5px;
+}
 .parallax {
 	/* improve parallax*/
 	transform: scaleZ(1);
@@ -245,7 +268,7 @@ span.yellow_l {
 	animation: rotatee 2.0s infinite linear;
 }
 #main-nav .current, .navbar-default .navbar-nav > li > a:hover {
-	color: #e3e448
+	color: rgb(4, 139, 154);
 }
 .navbar-default .navbar-toggle .icon-bar {
     background: black;
@@ -716,7 +739,6 @@ span.yellow_l {
 	padding-bottom: 17px;
 	padding-left: 7px;
 	padding-right: 7px;
-	color: #e3e448;
 
 	-webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -727,7 +749,9 @@ span.yellow_l {
     opacity: .9;
 }
 .home-bottom a {
-    font-size: 50px;
+    font-size: 35px;
+    color: white;
+    opacity: .8;
 }
 
 #multi-page, #one-page {
@@ -1442,7 +1466,7 @@ nav li {
 /* ABOUT SECTION */
 section#about, section#lasalle {
 	text-align: center;
-	background: black;
+	background: rgb(4, 139, 154);
 }
 
 section#about h2, section#about p {

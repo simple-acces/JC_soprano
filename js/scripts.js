@@ -200,6 +200,7 @@
             e.style = ""
         })
         $('#loader, .spinner').css('display', 'block')
+        $('.main_photo img').removeClass('current')
         setTimeout(done, 500)
     }
 
@@ -208,6 +209,7 @@
         $('#lasalle_photo').addClass('mobile')
         $('#lasalle_photo').css('height', $(window).height())
     }
+    var timeout
     var update_photo = function(index) {
         // get index
         var old = $('#lasalle_photo .main_photo img.current')
@@ -228,21 +230,21 @@
         current.addClass('current')
         current_min.addClass('current')
         current_title.addClass('current')
-    }
-    var lasalle_inter = setInterval(update_photo, 8000)
 
-    $('#lasalle_photo .min_photo img').click(function() {
-        update_photo($(this).index())
-        clearInterval(lasalle_inter)
-        lasalle_inter = setInterval(update_photo, 8000)
-    })
+        clearTimeout(timeout)
+        timeout = setTimeout(update_photo, 8000)
+    }
 
     update_photo(0)
 
-    $('section#lescours .district_bt').hover(function() {
-        $(this).addClass('hover')
-    }, function() {
-        $(this).removeClass('hover')
+    $('.bphotor').click(function() {
+        update_photo()
+    })
+
+    $('.bphotol').click(function() {
+        var i = $('#lasalle_photo .main_photo img.current').index()
+        i = i === 0 ? $('#lasalle_photo .main_photo img').length - 1 : i - 1
+        update_photo(i)
     })
 
 })(jQuery);
