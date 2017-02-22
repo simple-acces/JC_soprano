@@ -775,7 +775,6 @@ span.yellow_l {
     background-size: cover;
 }
 .content {
-    position: relative;
     z-index: 3;
     background-color: #fff;
 }
@@ -1484,6 +1483,22 @@ section#about .content, section#lasalle .content, section#lescours .content {
 		text-align: justify;
 		margin: 10px;
 	}
+}
+
+.circle {
+	margin: 25px 10px;
+    width: 200px;
+    color: #fff;
+    font-size: 32px;
+    line-height: 200px;
+    text-align: center;
+    height: 200px;
+    border-radius: 100px;
+	background: rgb(4, 139, 154);
+}
+
+.span3 {
+    display: inline-block;
 }
 
 /* LA SALLE SECTION */
