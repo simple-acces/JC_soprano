@@ -269,6 +269,7 @@
             document.body.removeChild(galery)
         }
         $(document).unbind('keydown')
+        enableScroll()
     }
 
     var prepare_neighbours = function(index) {
@@ -375,6 +376,7 @@
             }
             e.preventDefault(); // prevent the default action (scroll / move caret)
         });
+        disableScroll()
     }
 
     $('.image_btn').hover(function() {
@@ -386,5 +388,43 @@
     $('.image_btn').click(function() {
         open_galery($('.image_btn').index($(this)))
     })
+
+
+    var preventDefault = (e) => {
+        e = e || window.event
+        if (e.preventDefault) {
+            e.preventDefault()
+        }
+        e.returnValue = false
+    }
+
+    var preventDefaultForScrollKeys = (e) => {
+        var keys = {38: 1, 40: 1}
+        if (keys[e.keyCode]) {
+            preventDefault(e)
+            return false
+        }
+    }
+
+    var disableScroll = () => {
+        if (window.addEventListener) {
+            window.addEventListener('DOMMouseScroll', preventDefault, false)
+        }
+        window.onwheel = preventDefault // modern standard
+        window.onmousewheel = document.onmousewheel = preventDefault // older browsers, IE
+        window.ontouchmove  = preventDefault // mobile
+        document.onkeydown  = preventDefaultForScrollKeys
+    }
+
+    var enableScroll = () => {
+        if (window.removeEventListener) {
+            window.removeEventListener('DOMMouseScroll', preventDefault, false)
+        }
+        window.onmousewheel = document.onmousewheel = null
+        window.onwheel = null
+        window.ontouchmove = null
+        document.onkeydown = null
+    }
+
 
 })(jQuery);
