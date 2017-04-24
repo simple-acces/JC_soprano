@@ -427,4 +427,14 @@
     }
 
 
+    $('#future').click(() => {
+        $('#futureDates')[0].style.display = 'block'
+        $('#previousDates')[0].style.display = 'none'
+    })
+
+    $('#previous').click(() => {
+        $('#futureDates')[0].style.display = 'none'
+        $('#previousDates')[0].style.display = 'block'
+    })
+
 })(jQuery);

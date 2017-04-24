@@ -4154,3 +4154,55 @@ pre {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 5px 5px 5px 5px;
 }
+.dates_btn {
+    cursor: pointer;
+}
+.event_content {
+    border: solid 1px grey;
+	width: 300px;
+    display: inline-block;
+    height: 470px;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+}
+.event_img {
+    width: 100%;
+}
+.event_content:hover .event_img {
+    transition: transform 1s;
+    transform: translateY(-300px);
+}
+.event_content:hover .event_title {
+    transition: transform 1s;
+    transform: translateY(-300px);
+}
+.top_text {
+    font-size: 18px;
+}
+.hidden_text {
+     z-index: 10;
+}
+.event_content:hover .top_text {
+    transition: transform 1s;
+    transform: translateY(-300px);
+}
+.event_content:hover .hidden_text {
+    transition: transform 1s;
+    transform: translateY(-330px);
+    display: block;
+}
+.event_btn {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 40px;
+    margin-right: 80px;
+    margin-left: 80px;
+    display: block;
+    background-color: rgb(4, 139, 154);
+    color: white;
+    z-index: 100;
+    cursor: pointer;
+}
