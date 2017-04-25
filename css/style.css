@@ -4158,7 +4158,7 @@ pre {
     cursor: pointer;
 }
 .event_content {
-    border: solid 1px grey;
+    border: ridge 1px whitesmoke;
 	width: 300px;
     display: inline-block;
     height: 470px;
