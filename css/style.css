@@ -4156,6 +4156,15 @@ pre {
 }
 .dates_btn {
     cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+}
+.dates_btn.current{
+    color: rgb(4, 139, 154);
+}
+.event {
+    display: inline-block;
+    margin-left: 25px;
 }
 .event_content {
     border: ridge 1px whitesmoke;

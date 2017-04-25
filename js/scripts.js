@@ -428,11 +428,15 @@
 
 
     $('#future').click(() => {
+        $('#future').addClass('current')
+        $('#previous').removeClass('current')
         $('#futureDates')[0].style.display = 'block'
         $('#previousDates')[0].style.display = 'none'
     })
 
     $('#previous').click(() => {
+        $('#future').removeClass('current')
+        $('#previous').addClass('current')
         $('#futureDates')[0].style.display = 'none'
         $('#previousDates')[0].style.display = 'block'
     })
