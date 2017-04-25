@@ -4192,14 +4192,16 @@ pre {
 }
 .hidden_text {
      z-index: 10;
+     opacity: 0;
+     transition: opacity 1s ease-in-out, transform 1s;
 }
 .event_content:hover .top_text {
     transition: transform 1s;
     transform: translateY(-300px);
 }
 .event_content:hover .hidden_text {
-    transition: transform 1s;
     transform: translateY(-330px);
+    opacity: 1;
     display: block;
 }
 .event_btn {
