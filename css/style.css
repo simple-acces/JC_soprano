@@ -4165,6 +4165,7 @@ pre {
 .event {
     display: inline-block;
     margin-left: 25px;
+    margin-top: 25px;
 }
 .event_content {
     border: ridge 1px whitesmoke;
