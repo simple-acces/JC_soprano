@@ -4178,31 +4178,36 @@ pre {
 }
 .event_img {
     width: 100%;
+    transition: transform 1s;
 }
 .event_content:hover .event_img {
-    transition: transform 1s;
     transform: translateY(-300px);
 }
-.event_content:hover .event_title {
+.event_title {
     transition: transform 1s;
+}
+.event_content:hover .event_title {
     transform: translateY(-300px);
 }
 .top_text {
+    transition: transform 1s;
     font-size: 18px;
-}
-.hidden_text {
-     z-index: 10;
-     opacity: 0;
-     transition: opacity 1s ease-in-out, transform 1s;
 }
 .event_content:hover .top_text {
     transition: transform 1s;
     transform: translateY(-300px);
 }
+.hidden_text {
+     z-index: 10;
+     opacity: 0;
+     display: block;
+     transition: opacity 1s, transform 1s;
+}
+
 .event_content:hover .hidden_text {
+    transition: opacity 2s, transform 1s;
     transform: translateY(-330px);
     opacity: 1;
-    display: block;
 }
 .event_btn {
     padding-top: 7px;
