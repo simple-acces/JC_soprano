@@ -751,6 +751,8 @@ span.yellow_l {
     color: white;
     opacity: .8;
     cursor: pointer;
+    right: 40px;
+    position: relative;
 }
 .home-bottom a:hover {
     opacity: .9;
