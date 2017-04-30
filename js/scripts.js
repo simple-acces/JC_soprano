@@ -441,4 +441,31 @@
         $('#previousDates')[0].style.display = 'block'
     })
 
+    $('#futureM').click(() => {
+        $('#future').addClass('current')
+        $('#previous').removeClass('current')
+        $('#futureDates')[0].style.display = 'block'
+        $('#previousDates')[0].style.display = 'none'
+    })
+
+    $('#previousM').click(() => {
+        $('#future').removeClass('current')
+        $('#previous').addClass('current')
+        $('#futureDates')[0].style.display = 'none'
+        $('#previousDates')[0].style.display = 'block'
+    })
+    document.getElementById('previousM').style.color = 'black'
+    document.getElementById('futureM').style.color = 'black'
+
+    $('#futureM').hover(() => {
+        document.getElementById('futureM').style.color = 'rgb(4, 139, 154)'
+        document.getElementById('previousM').style.color = 'black'
+    })
+
+    $('#previousM').hover(() => {
+        document.getElementById('previousM').style.color = 'rgb(4, 139, 154)'
+        document.getElementById('futureM').style.color = 'black'
+    })
+
+
 })(jQuery);
