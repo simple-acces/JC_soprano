@@ -454,18 +454,9 @@
         $('#futureDates')[0].style.display = 'none'
         $('#previousDates')[0].style.display = 'block'
     })
-    document.getElementById('previousM').style.color = 'black'
-    document.getElementById('futureM').style.color = 'black'
 
-    $('#futureM').hover(() => {
-        document.getElementById('futureM').style.color = 'rgb(4, 139, 154)'
-        document.getElementById('previousM').style.color = 'black'
+    //PREVENT TO COLLAPSE THE NAVBAR ON MOBILE
+    $('#agenda').click( (e) => {
     })
-
-    $('#previousM').hover(() => {
-        document.getElementById('previousM').style.color = 'rgb(4, 139, 154)'
-        document.getElementById('futureM').style.color = 'black'
-    })
-
 
 })(jQuery);

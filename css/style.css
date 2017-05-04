@@ -269,7 +269,7 @@ span.yellow_l {
 	-webkit-animation: rotatee 2.0s infinite linear;
 	animation: rotatee 2.0s infinite linear;
 }
-#main-nav .current, .navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > a:hover {
 	color: rgb(4, 139, 154);
 }
 .navbar-default .navbar-toggle .icon-bar {
@@ -1226,6 +1226,7 @@ nav li {
         -ms-transition: all 0.2s ease;
         transition: all 0.2s ease;
     }
+    .dropdown.open > ul.dropdown-menu,
     .dropdown:hover > ul.dropdown-menu{
         visibility:visible;
         opacity:1;
@@ -1302,6 +1303,9 @@ nav li {
 }
 .content {
     margin-top:0px;
+}
+.navbar {
+    z-index: 99999999;
 }
 .navbar .icon {
     font-size: 18px;
@@ -4167,7 +4171,7 @@ pre {
 }
 .event {
     display: inline-block;
-    margin-left: 25px;
+    margin-right: 25px;
     margin-top: 25px;
 }
 .event_content {
